@@ -1,0 +1,70 @@
+{
+  "Departamentos": [
+    {
+      "id": 1,
+      "nomDepartamento": "Santander"
+    },
+    {
+      "id": 2,
+      "nomDepartamento": "Cundinamarca"
+    },
+    {
+      "id": 3,
+      "nomDepartamento": "gol"
+    }
+  ],
+  "Ciudades": [
+    {
+      "id": 1,
+      "nomCiudad": "Bucaramanga",
+      "departamentoId": 1,
+      "Imagen": "https://scontent.fbga3-1.fna.fbcdn.net/v/t39.30808-6/359810600_781967200382834_5667771520010062588_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=w6Np9mTMcVAAX-7MO4B&_nc_ht=scontent.fbga3-1.fna&oh=00_AfDcEtYhDvQdSREPC0JVhnuAWTOPcbBwjMpapA-XfZf4Yw&oe=64BB234A",
+      "coordenadas": {
+        "lat": 4,
+        "lon": 72
+      }
+    },
+    {
+      "id": 2,
+      "nomCiudad": "Barrancabermeja",
+      "departamentoId": 1,
+      "Imagen": "https://scontent.fbga3-1.fna.fbcdn.net/v/t39.30808-6/361104421_781967073716180_8028861748457231423_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=esTzHNeWHQEAX9anoN5&_nc_ht=scontent.fbga3-1.fna&oh=00_AfBSGh95jeEHW-E8GLtwAegeYD3bmVtjM6F35TtEgxchCg&oe=64BA7DCE",
+      "coordenadas": {
+        "lat": 4,
+        "lon": 72
+      }
+    },
+    {
+      "id": 3,
+      "nomCiudad": "Bogotá",
+      "departamentoId": 2,
+      "Imagen": "https://scontent.fbga3-1.fna.fbcdn.net/v/t39.30808-6/361590531_781966807049540_9124011843732049072_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=uxkcWurjiqMAX-J2na5&_nc_oc=AQmXOfxDQ1yj88uARQYsEwjXsyRkSNChhDXCL1dlSt3HF17713mapZwtsTPkngzHHu8&_nc_ht=scontent.fbga3-1.fna&oh=00_AfDUlymxmIiYRPbVeRF5tr20Dmd5vAyWFAJIQpe-xqN0YQ&oe=64BB350B",
+      "coordenadas": {
+        "lat": 4,
+        "lon": 72
+      }
+    },
+    {
+      "id": 4,
+      "nomCiudad": "Cajicá",
+      "departamentoId": 2,
+      "Imagen": "https://scontent.fbga3-1.fna.fbcdn.net/v/t39.30808-6/359799384_781967170382837_8001596521863868430_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=O4_nNJyt8BkAX9v9YnV&_nc_ht=scontent.fbga3-1.fna&oh=00_AfD8bCQF7hSQF5SJdLqh1oNIOCNYWId3oZbKkyy0MiblUQ&oe=64BAE6A1",
+      "coordenadas": {
+        "lat": 4,
+        "lon": 72
+      }
+    },
+    {
+      "id": 5,
+      "nomCiudad": "Giron",
+      "departamentoId": 3,
+      "Imagen": ""
+    },
+    {
+      "id": 6,
+      "nomCiudad": "Pasto",
+      "departamentoId": 3,
+      "Imagen": ""
+    }
+  ]
+}

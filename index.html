@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <title>Departamentos y Ciudades</title>
+</head>
+
+<body class="bg-dark" id="body_t">
+
+  <nav class="navbar bg-dark m-0 p-0">
+      <div class="container">
+        <h1 class="navbar-brand text-light fw-bold"> 🌇 Departamentos y sus Ciudades! 🏙️</h1>
+        <div class="d-flex justify-content-center align-items-center p-2">
+          <button type="button" class="btn btn-success border border-dark fw-bold" data-bs-toggle="modal" data-bs-target="#cambiar_letra">💌 Tamaño de letra 💌</button>
+        </div> 
+      </div>
+  </nav>
+  <div id="fondo">
+    <div class="countainer d-flex justify-content-center align-items-center p-2">
+      <input type="submit" class="btn btn-success border border-dark fw-bold" 
+      data-bs-toggle="modal" data-bs-target="#nueva" value="🏘️ Agregar Nuevo Departamento 🏘️ ">
+    </div> 
+    <div class="container container-fluid d-flex justify-content-center align-items-center">
+      <div class="table-responsive routes_Container mt-3">
+        <table class="table border border-black" id="form">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre del Departamento</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead> 
+          <tbody id="tablita_r"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="table-responsive routes_Container mt-1 d-none" id="quitar">
+        <table class="table border border-black" id="form2">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre de las Ciudades</th>
+              <th scope="col">Clima</th>
+              <th scope="col">Imagen</th>
+              <th scope="col"></th>
+            </tr>
+          </thead> 
+          <tbody id="tablita_p"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="countainer d-flex justify-content-center align-items-center p-2 d-none" id="quitar1">
+      <input type="submit" class="btn btn-success border border-dark fw-bold" 
+      data-bs-toggle="modal" data-bs-target="#nuevo" value="🏛️ Agregar Nueva ciudad 🏛️">
+    </div>
+    <div class="modal fade" id="cambiar_letra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Selecciona el tamaño de la Letra 👁️‍🗨️</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <select class="form-select" id="letra">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="btn_agregar_l">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="modal fade" id="nueva" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Departamento ➕</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label">Nombre del Departamento</label>
+            <input type="text" class="form-control" placeholder="Santander" id="nueva_r"></input>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="btn_agregar">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="modal fade" id="modal_r" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Renombrar Departamento 💫</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label">Nombre del Departamento </label>
+            <input type="text" class="form-control" placeholder="Meta" id="nuevo_nombre"></input>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"   id="renombrar_r">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="modal fade" id="nuevo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Ciudad 🚧</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label">Nombre del la Ciudad</label>
+            <input type="text" class="form-control" placeholder="Pasto" id="nuevo_p"></input>
+            <input type="text" class="form-control" placeholder="Direccion de imagen" id="nuevo_p1"></input>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="btn_agregar_p">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="modal fade" id="modal_p" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal_p">Editar Ciudad 🏗</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label">Nombre del la Ciudad</label>
+            <input type="text" class="form-control m-1 border border-dark" placeholder="Medellin" id="editado_np"></input>
+            <label class="form-label">Direccion de la imagen</label>
+            <input type="text" class="form-control m-1 border border-dark" placeholder="https://colombia.com/cajica.jpg" id="editado_img"></input>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="editar_p">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="./js/index.js" type="module" defer></script>
+  <script src="./js/funciones.js" type="module" defer></script>
+  <script src="./js/clima.js" type="module" defer></script>
+</body>
+
+</html>
